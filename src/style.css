@@ -1,0 +1,57 @@
+body{
+    position: fixed;
+    background-image: url(../src/fundo-de-twitter.jpg);
+    background-size: cover;
+}
+
+h1{
+    background-color: #248eff;
+    width: 1350px;
+    height: 45px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+#Ola{
+    background-color: white;
+    position: absolute;
+    float: left;
+    transform: translate(30px, 10px);
+    width: 500px;
+    height: 250px;
+    font-size: 20px;
+    border-radius: 10px; 
+}
+
+#texto{
+    background-color: #cad7ff;
+    position: absolute;
+    float: right;
+    transform: translate(600px, 10px);
+    width: 500px;
+    height: 250px;  
+    font-size: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#btn_tweet{
+    background-color: #248eff;
+    color: white;
+    width: 100px;
+    height: 35px;
+    font-weight: bold;
+}
+
+#btn_codigo{
+    background: transparent;
+    color: #1e2f4f;
+    font-weight: bold;
+}
+
+footer{
+    font-size: 20px;
+    bottom: 0;
+    width: 100%;
+}
