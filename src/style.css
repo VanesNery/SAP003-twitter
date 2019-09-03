@@ -1,6 +1,6 @@
 body{
     position: fixed;
-    background-image: url(../src/fundo-de-twitter.jpg);
+    background-image: url(../src/fundo.jpg);
     background-size: cover;
 }
 
@@ -25,7 +25,7 @@ h1{
 }
 
 #texto{
-    background-color: #cad7ff;
+    background-color: white;
     position: absolute;
     float: right;
     transform: translate(600px, 10px);
@@ -42,12 +42,29 @@ h1{
     width: 100px;
     height: 35px;
     font-weight: bold;
+    border-radius: 10px;
+}
+
+#mensagem{
+    background-color: white;
+    position: absolute;
+    float: right;
+    transform: translate(30px, 300px); 
+    font-size: 20px;
+    border-radius: 10px;
+    width: 1200px;
+    height: 35px;
+}
+
+#Texto{
+    border:none;
 }
 
 #btn_codigo{
     background: transparent;
     color: #1e2f4f;
     font-weight: bold;
+    border: none;
 }
 
 footer{
