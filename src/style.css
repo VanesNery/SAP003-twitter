@@ -45,6 +45,13 @@ h1{
     border-radius: 10px;
 }
 
+#contador{
+    color: #248eff;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;    
+}
+
 #mensagem{
     background-color: white;
     position: absolute;
