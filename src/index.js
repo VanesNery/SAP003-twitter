@@ -5,21 +5,24 @@ let texto = document.getElementById("Texto").value.length;
 let res = max - texto;
 document.getElementById("contador").innerHTML = res;
 
-if(texto === "0"){
-    document.getElementById("btn_tweet").disabled = false;
-}
-
-else{
+if(texto === 0 || texto > 140){
     document.getElementById("btn_tweet").disabled = true;
-    return botaotweet;
+    document.getElementById ("contador").style.color = "#f01c1c";
+}
+else if (texto <= 120){
+    document.getElementById("btn_tweet").disabled = false;
+    document.getElementById("btn_tweet").addEventListener("click", botaotweet);
+ }
+else{
+    document.getElementById("btn_tweet").disabled = false;
+    document.getElementById ("contador").style.color = "#32CD32";
+    document.getElementById("btn_tweet").addEventListener("click", botaotweet);
 }
 }
-
-document.getElementById("btn_tweet").addEventListener("click", botaotweet);
-    function botaotweet (){
+function botaotweet (){
       let msg = [];
       let Guardar = document.getElementById("Texto").value;
-      let Texto = localStorage.setItem("key", Guardar);
+      localStorage.setItem("key", Guardar);
       msg.push(localStorage.getItem("key"));
-      document.getElementById("mensagem").innerHTML+= msg;
+      document.getElementById("mensagem").innerHTML= msg;
     }
