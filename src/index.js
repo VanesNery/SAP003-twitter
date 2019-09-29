@@ -6,7 +6,7 @@ counter = document.getElementById("counter");
 
 btntweet.addEventListener("click", buttontweet);
 
-function buttontweet (e){
+function buttontweet (){
   let prinText = document.createElement("div");
   prinText.setAttribute("id", "printE")
   prinText.textContent = message.value;
@@ -14,9 +14,9 @@ function buttontweet (e){
   message.value = "";
 }
 
-message.addEventListener("keypress", contChar);
+message.addEventListener("keyup", contChar);
 
-function contChar(e){
+function contChar(){
   let res = MAX - message.value.length;
   counter.innerHTML = res;
   
@@ -32,7 +32,9 @@ function contChar(e){
     btntweet.removeAttribute("disabled");
     counter.style.color = "#ff7300";
   }
-  
+
   let lines = message.value.split("\n");
-  message.setAttribute("rows", lines.length);
+  let linesCount = lines.reduce((acum,line)=> acum + Math.max(Math.ceil(line.length/50), 1),0)
+   
+  message.setAttribute("rows", linesCount);
 }
