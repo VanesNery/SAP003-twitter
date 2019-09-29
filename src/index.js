@@ -2,6 +2,7 @@ let message = document.getElementById("message");
 let btntweet = document.getElementById("btntweet");
 let print = document.getElementById("print");
 const MAX = 140;
+counter = document.getElementById("counter");
 
 btntweet.addEventListener("click", buttontweet);
 
@@ -13,22 +14,25 @@ function buttontweet (e){
   message.value = "";
 }
 
-message.addEventListener("keyup", contChar);
+message.addEventListener("keypress", contChar);
 
 function contChar(e){
   let res = MAX - message.value.length;
-  document.getElementById("counter").innerHTML = res;
+  counter.innerHTML = res;
   
-  if(message === 0 || message > 140){
-    document.getElementById("counter").style.color = "#f01c1c";
+  if(res < 0 || res > 140){
+    btntweet.setAttribute("disabled", "");
+    counter.style.color = "#f01c1c";
   }
-  else if (message <= 120){
+  else if (res > 20){
     btntweet.removeAttribute("disabled");
-    document.getElementById("btntweet").addEventListener("click", buttontweet);
+    counter.style.color = "#32CD32";
    }
   else{
     btntweet.removeAttribute("disabled");
-    document.getElementById("counter").style.color = "#32CD32";
-    document.getElementById("btntweet").addEventListener("click", buttontweet);
+    counter.style.color = "#ff7300";
   }
-  }
+  
+  let lines = message.value.split("\n");
+  message.setAttribute("rows", lines.length);
+}

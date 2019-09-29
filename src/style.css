@@ -30,7 +30,7 @@ h1{
     float: right;
     transform: translate(600px, 10px);
     width: 50%;
-    height: 250px;
+    height: auto;
     font-size: 20px;
     overflow: hidden;
     border-radius: 10px;
@@ -60,9 +60,8 @@ h1{
     font-size: 20px;
     border-radius: 10px;
     width: 1200px;
-    height: 35px;
+    height: auto;
     white-space: pre;
-    overflow: hidden;
 }
 
 .line{
