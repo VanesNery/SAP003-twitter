@@ -7,22 +7,27 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main>
-  <div id="Ola">
+  <main></main>
+  <section>
+  <div id="welcome" class="welcome">
     <p>Bem Vindo, ...<br>
     Você já pode começar a mandar suas atualizações.</p>
-    <input type="submit" id="btn_codigo" value="CODIGO"/><br><br>
+    <input type="submit" id="btnkey" class="btnkey" value="CODIGO"/><br><br>
   </div>
-  <div id="texto">
-    <textarea type="text" id="Texto" placeholder="Digite a mensagem..."></textarea><br><br>
-    <hr id="linha">
-    <input type="submit" id="btn_tweet" value="🐦 TWEET" disabled/><div id="contador"></div>
+  </section>
+  <section>
+   <div id="box-text" class="box-text">
+    <textarea type="text" id="message" class="message" placeholder="Digite a mensagem..." cols="50" rows="1"></textarea><br><br>
+    <hr id="line">
+    <input type="submit" id="btntweet" class="btntweet" value="🐦 TWEET" />
   </div>
-  <div id="mensagem"></div>
+  </section>
+  <ul id="print" class="print">
+  </ul>
   </main>
 <script src="index.js"></script>
-</body>
-<!--<footer>
+<footer class="end">
   <p>Criando por Vanessa Nery... Projeto Twitter na Laboratoria</p>
-</footer>-->
+</footer>
+</body>
 </html>

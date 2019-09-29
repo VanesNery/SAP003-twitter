@@ -1,28 +1,13 @@
-const texto = document.getElementById("Texto").addEventListener("keyup", contaChar);
-function contaChar(){
-let max = 140;
-let texto = document.getElementById("Texto").value.length;
-let res = max - texto;
-document.getElementById("contador").innerHTML = res;
+let message = document.getElementById("message");
+let btntweet = document.getElementById("btntweet");
+let print = document.getElementById("print");
 
-if(texto === 0 || texto > 140){
-    document.getElementById("btn_tweet").disabled = true;
-    document.getElementById ("contador").style.color = "#f01c1c";
+btntweet.addEventListener("click", buttontweet);
+
+function buttontweet (e){
+  let prinText = document.createElement("li");
+  prinText.setAttribute("id", "printE")
+  prinText.textContent = message.value;
+  print.appendChild(prinText);
+  message.value = "";
 }
-else if (texto <= 120){
-    document.getElementById("btn_tweet").disabled = false;
-    document.getElementById("btn_tweet").addEventListener("click", botaotweet);
- }
-else{
-    document.getElementById("btn_tweet").disabled = false;
-    document.getElementById ("contador").style.color = "#32CD32";
-    document.getElementById("btn_tweet").addEventListener("click", botaotweet);
-}
-}
-function botaotweet (){
-      let msg = [];
-      let Guardar = document.getElementById("Texto").value;
-      localStorage.setItem("key", Guardar);
-      msg.push(localStorage.getItem("key"));
-      document.getElementById("mensagem").innerHTML= msg;
-    }
