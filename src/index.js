@@ -7,11 +7,11 @@ counter = document.getElementById("counter");
 btntweet.addEventListener("click", buttontweet);
 
 function buttontweet (){
-  let prinText = document.createElement("div");
-  // prinText.setAttribute("id", "printE")
+  let prinText = document.createElement("ul");
+  prinText.setAttribute("id", "printE")
   let dateString = new Date().toTimeString().substring(0,5);
   let textEnters = message.value.replace(/\n/g, "<br>");
-  prinText.innerHTML = "["+ dateString +"]" + textEnters;
+  prinText.innerHTML = "["+ dateString +"] " + textEnters;
   print.appendChild(prinText);
   message.value = "";
  contChar();

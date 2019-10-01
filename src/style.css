@@ -29,10 +29,8 @@ h1{
     position: absolute;
     float: right;
     transform: translate(600px, 10px);
-    width: 35%;
-    height: auto;
-    font-size: 20px;
-    overflow: hidden;
+    width: 50%;
+    height: 250px;
     border-radius: 10px;
 }
 
@@ -53,15 +51,13 @@ h1{
 }
 
 #printE{
+    display: flex;
+    justify-content: space-between;
     background-color: white;
-    position: absolute;
-    float: right;
-    transform: translate(30px, 300px);
-    font-size: 20px;
+    transform: translate3d(30px, 300px, 900px);
     border-radius: 10px;
-    width: 10%;
+    width: 90%;
     height: auto;
-    white-space: pre;
 }
 
 .line{
@@ -70,7 +66,7 @@ h1{
 }
 
 .message{
-    width: auto;
+    width: 100%;
     border: none;
 }
 
