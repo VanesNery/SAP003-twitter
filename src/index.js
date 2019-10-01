@@ -8,10 +8,13 @@ btntweet.addEventListener("click", buttontweet);
 
 function buttontweet (){
   let prinText = document.createElement("div");
-  prinText.setAttribute("id", "printE")
-  prinText.textContent = message.value;
+  // prinText.setAttribute("id", "printE")
+  let dateString = new Date().toTimeString().substring(0,5);
+  let textEnters = message.value.replace(/\n/g, "<br>");
+  prinText.innerHTML = "["+ dateString +"]" + textEnters;
   print.appendChild(prinText);
   message.value = "";
+ contChar();
 }
 
 message.addEventListener("keyup", contChar);
@@ -34,7 +37,7 @@ function contChar(){
   }
 
   let lines = message.value.split("\n");
-  let linesCount = lines.reduce((acum,line)=> acum + Math.max(Math.ceil(line.length/50), 1),0)
+  let linesCount = lines.reduce((acum,line)=> acum + Math.max(Math.ceil(line.length/50), 1),0);
    
   message.setAttribute("rows", linesCount);
 }
