@@ -10,8 +10,8 @@ btntweet.addEventListener("click", buttontweet);
 // document.getElementById("mensagem").innerHTML+= localStorage.getItem("key"); 
 
 function buttontweet (){
-  let prinText = document.createElement("ul");
-  prinText.setAttribute("id", "printE")
+  let prinText = document.createElement("div");
+  prinText.setAttribute("class", "printE")
   let dateString = new Date().toTimeString().substring(0,5);
   let textEnters = message.value.replace(/\n/g, "<br>");
   prinText.innerHTML = "["+ dateString +"] " + textEnters;
@@ -26,7 +26,7 @@ function contChar(){
   let res = MAX - message.value.length;
   counter.innerHTML = res;
   
-  if(res < 0 || res > 140){
+  if(res <=0 || res > 140){
     btntweet.setAttribute("disabled", "");
     counter.style.color = "#f01c1c";
   }
