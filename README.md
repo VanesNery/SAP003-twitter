@@ -18,8 +18,10 @@
 
 Projeto Desafio proposto pela Laboratoria. Como produto final, entregue uma pagina web, que apresentar um feed de notícias do Twitter, com a possibilidade de contar os caracteres de forma regressiva, desativa o botão caso não tenha caracteres na caixa de mensagem, apresenta a data e hora que foi realizado o comentário.
 
-- Prototipo ![exemplo twitter](https://media.giphy.com/media/3ov9jP4RIGQCUQOScg/giphy.gif)
-- Site ![site](./images/Twitter.gif)
+- Prototipo 
+![exemplo twitter](https://media.giphy.com/media/3ov9jP4RIGQCUQOScg/giphy.gif)
+- Site 
+![site](./images/Twitter.gif)
 
 ## 2. Versão 0.0.1 ✔
 
