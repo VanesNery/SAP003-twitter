@@ -4,34 +4,48 @@ body{
     background-size: cover;
 }
 
+.begin{
+    margin: 2vw -1vw;
+}
+
 h1{
     background-color: #248eff;
-    width: 1350px;
+    margin: -1vw -1vw;
+    width: 1371px;
     height: 45px;
     color: white;
     font-size: 30px;
     text-align: center;
+    padding: 18px 0px;
 }
 
 .welcome{
     background-color: white;
     position: absolute;
     float: left;
-    transform: translate(30px, 10px);
     width: 500px;
-    height: 250px;
+    height: 224px;
     font-size: 20px;
-    border-radius: 10px; 
+    border-radius: 10px;
+    padding: 1vw;
+}
+
+.Welcome{
+    margin: 3vw 5vw;
 }
 
 .box-text{
     background-color: white;
     position: absolute;
     float: right;
-    transform: translate(600px, 10px);
     width: 50%;
-    height: 250px;
+    height: 241px;
     border-radius: 10px;
+    padding: 5px;
+}
+
+.BoxText{
+    margin: 1vw 46.5vw;
 }
 
 .btntweet{
@@ -66,7 +80,7 @@ h1{
 }
 
 .message{
-    width: 100%;
+    width: 98%;
     border: none;
 }
 
@@ -79,7 +93,11 @@ h1{
 
 .end{
     font-size: 15px;
+    margin: 38vw 0vw;
     color: white;
+    position: fixed;
     width: 100%;
-    transform: translate(450px, 550px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

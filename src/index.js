@@ -6,6 +6,9 @@ counter = document.getElementById("counter");
 
 btntweet.addEventListener("click", buttontweet);
 
+// let Texto = localStorage.setItem("key", Guardar);
+// document.getElementById("mensagem").innerHTML+= localStorage.getItem("key"); 
+
 function buttontweet (){
   let prinText = document.createElement("ul");
   prinText.setAttribute("id", "printE")
